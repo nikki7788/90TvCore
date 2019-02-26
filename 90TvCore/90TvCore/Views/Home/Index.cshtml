@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "وب سایت رسمی نود";
+}
+<!-- General container-->
+<div id="container" class="container-fluid">
+    <!--start header-->
+    @await Html.PartialAsync("_HeaderPartial")
+    <!--start  navbar-->
+    @await Html.PartialAsync("_NavbarPartial")
+    <!--End navbar-->
+    <!--start content-->
+    <div class="container mt-3" id="content">
+        <!--start content-body-->
+        <div class="row" id="content-body">
+            <!--start main content-->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <!--start slider or carousel-->
+                @await Html.PartialAsync("_SliderPartial")
+                <!--end slider or carousel-->
+                <!--start the  advers below slider-->
+                <div class="advers-main-content">
+                    <img src="image/adv-bootum-mainslider.gif" />
+                </div>
+                <!--end main advers-->
+                <!-- start special news-->
+                @await Html.PartialAsync("_SpecialNewsPartial")
+                <!--end special news-->
+                <!--start main advers-->
+                <div class="advers-main-content">
+                    <img src="image/adv-bootum-mainslider1.gif" />
+                </div>
+                <!--end main advers-->
+                <!--start last-videos-->
+                @await Html.PartialAsync("_LastVideosPartial")
+                <!--End last videos-->
+
+            </div>   <!--end main content-->
+            <!--start list second part-->
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <!--start last-info-->
+                @await Html.PartialAsync("_LastInfoPartial")
+                <!--end lst-info-->
+                <!--start newspapers-->
+                @await Html.PartialAsync("_NewspapersPartial")
+                <!--end newspapers-->
+                <!--start poll-->
+                @await Html.PartialAsync("_PollPartial")
+                <!--end poll-->
+            </div><!--end list second part-->
+            <!--start advers-->
+            @await Html.PartialAsync("_AdvertisingPartial")
+            <!--end advers-->
+        </div><!--end content-body-->
+    </div> <!--end content-->
+    <!--start footer-->
+    @await Html.PartialAsync("_FooterPartial")
+    <!--End footer-->
+</div><!--end container-->
+<script>
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+</script>
